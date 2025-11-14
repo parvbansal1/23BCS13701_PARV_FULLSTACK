@@ -1,85 +1,64 @@
+# Expense Tracker – Spring Boot Backend
 
-💰 Expense Tracker – Full Stack (Java + Spring Boot)
+A full-featured Expense Tracking System built using Java Spring Boot.
 
-A full-stack Expense Tracking Application built using Java Spring Boot.
-It includes user authentication, budgeting, categories, transactions, reports, and more.
+## Features
+- JWT Authentication (Sign-In / Sign-Up)
+- Forgot & Reset Password
+- Manage Income & Expenses
+- Saved / Recurring Transactions
+- Categories CRUD
+- Monthly & Yearly Reports
+- Budget Management
+- Role-based Access (Admin/User)
+- Pagination & Filtering
 
-🚀 Features
+## Tech Stack
+- Java 17
+- Spring Boot
+- Spring Security (JWT)
+- Spring Data JPA (Hibernate)
+- MySQL
 
-User Authentication (Sign-Up, Sign-In, JWT)
+## Project Structure
+controllers/       → API Endpoints
+dto/               → Request & Response DTOs
+entities/          → JPA Models
+services/          → Business Logic
+exceptions/        → Custom Exceptions
+enums/             → All Enums
+dataSeeders/       → Default Roles & Transaction Types
+resources/         → Config Files
 
-Password Reset with email support
+## Setup
+1. Add MySQL credentials in application.properties
+2. Run:
+   mvn spring-boot:run
+3. Access:
+   http://localhost:8080
 
-Manage Transactions (add/edit/delete)
+## API Endpoints
 
-Saved Transactions with frequency options
+### Auth
+POST /auth/signup  
+POST /auth/signin  
+POST /auth/forgot-password  
+POST /auth/reset-password  
 
-Budget Management
+### Transactions
+POST /transactions  
+GET /transactions  
+PUT /transactions/{id}  
+DELETE /transactions/{id}  
 
-Categories Management
+### Categories & Budget
+CRUD /categories  
+CRUD /budget  
 
-Dynamic Monthly Reports
+### Reports
+GET /reports/monthly  
+GET /reports/yearly  
 
-Profile Image Upload
-
-Role-based access (Admin, User)
-
-Pagination for large data
-
-Pre-loaded seed data (Roles, Transaction Types)
-
-🏛️ Tech Stack
-
-Backend:
-
-Java 17
-
-Spring Boot
-
-Spring Security + JWT
-
-Spring Data JPA
-
-Hibernate
-
-MySQL
-
-📂 Project Structure
-/controllers       → All API endpoints  
-/dto               → Request & Response DTOs  
-/exceptions        → Custom exception handling  
-/enums             → Role, Transaction Types, Status  
-/dataSeeders       → Auto-populate default app data  
-/resources         → Configuration files  
-
-▶️ Running the Project
-
-Configure application.properties (DB username/password).
-
-Run using:
-
-mvn spring-boot:run
-
-
-App will start on:
-
-http://localhost:8080
-
-📌 API Highlights
-
-/auth/signup
-
-/auth/signin
-
-/transactions/*
-
-/categories/*
-
-/budget/*
-
-/reports/*
-
-👨‍💻 Author
-
+## Author
 Parv Bansal
-Full-Stack Developer | Java | Spring Boot
+Full Stack Developer (Java & Spring Boot)
